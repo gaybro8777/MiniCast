@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618ED1DA6061F00E71CFF /* AppDelegate.swift */; };
+		17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618EF1DA6061F00E71CFF /* FirstViewController.swift */; };
+		17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* SecondViewController.swift */; };
+		17A618F51DA6061F00E71CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F31DA6061F00E71CFF /* Main.storyboard */; };
+		17A618F71DA6061F00E71CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F61DA6061F00E71CFF /* Assets.xcassets */; };
+		17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */; };
+		17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */; };
+		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17A619011DA6061F00E71CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A618E21DA6061F00E71CFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A618E91DA6061F00E71CFF;
+			remoteInfo = SocialPodcast;
+		};
+		17A6190C1DA6061F00E71CFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17A618E21DA6061F00E71CFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A618E91DA6061F00E71CFF;
+			remoteInfo = SocialPodcast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		17A618F11DA6061F00E71CFF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		17A618F41DA6061F00E71CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17A618F61DA6061F00E71CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A618F91DA6061F00E71CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17A618FB1DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialPodcastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastTests.swift; sourceTree = "<group>"; };
+		17A619061DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialPodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
+		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17A618E71DA6061F00E71CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A618FD1DA6061F00E71CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A619081DA6061F00E71CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17A618E11DA6061F00E71CFF = {
+			isa = PBXGroup;
+			children = (
+				17A618EC1DA6061F00E71CFF /* SocialPodcast */,
+				17A619031DA6061F00E71CFF /* SocialPodcastTests */,
+				17A6190E1DA6061F00E71CFF /* SocialPodcastUITests */,
+				17A618EB1DA6061F00E71CFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17A618EB1DA6061F00E71CFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17A618EA1DA6061F00E71CFF /* SocialPodcast.app */,
+				17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */,
+				17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17A618EC1DA6061F00E71CFF /* SocialPodcast */ = {
+			isa = PBXGroup;
+			children = (
+				17A618ED1DA6061F00E71CFF /* AppDelegate.swift */,
+				17A618EF1DA6061F00E71CFF /* FirstViewController.swift */,
+				17A618F11DA6061F00E71CFF /* SecondViewController.swift */,
+				17A618F31DA6061F00E71CFF /* Main.storyboard */,
+				17A618F61DA6061F00E71CFF /* Assets.xcassets */,
+				17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */,
+				17A618FB1DA6061F00E71CFF /* Info.plist */,
+			);
+			path = SocialPodcast;
+			sourceTree = "<group>";
+		};
+		17A619031DA6061F00E71CFF /* SocialPodcastTests */ = {
+			isa = PBXGroup;
+			children = (
+				17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */,
+				17A619061DA6061F00E71CFF /* Info.plist */,
+			);
+			path = SocialPodcastTests;
+			sourceTree = "<group>";
+		};
+		17A6190E1DA6061F00E71CFF /* SocialPodcastUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */,
+				17A619111DA6061F00E71CFF /* Info.plist */,
+			);
+			path = SocialPodcastUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17A618E91DA6061F00E71CFF /* SocialPodcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcast" */;
+			buildPhases = (
+				17A618E61DA6061F00E71CFF /* Sources */,
+				17A618E71DA6061F00E71CFF /* Frameworks */,
+				17A618E81DA6061F00E71CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialPodcast;
+			productName = SocialPodcast;
+			productReference = 17A618EA1DA6061F00E71CFF /* SocialPodcast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17A618FF1DA6061F00E71CFF /* SocialPodcastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastTests" */;
+			buildPhases = (
+				17A618FC1DA6061F00E71CFF /* Sources */,
+				17A618FD1DA6061F00E71CFF /* Frameworks */,
+				17A618FE1DA6061F00E71CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A619021DA6061F00E71CFF /* PBXTargetDependency */,
+			);
+			name = SocialPodcastTests;
+			productName = SocialPodcastTests;
+			productReference = 17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17A6190A1DA6061F00E71CFF /* SocialPodcastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastUITests" */;
+			buildPhases = (
+				17A619071DA6061F00E71CFF /* Sources */,
+				17A619081DA6061F00E71CFF /* Frameworks */,
+				17A619091DA6061F00E71CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A6190D1DA6061F00E71CFF /* PBXTargetDependency */,
+			);
+			name = SocialPodcastUITests;
+			productName = SocialPodcastUITests;
+			productReference = 17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17A618E21DA6061F00E71CFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Axcoto;
+				TargetAttributes = {
+					17A618E91DA6061F00E71CFF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					17A618FF1DA6061F00E71CFF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17A618E91DA6061F00E71CFF;
+					};
+					17A6190A1DA6061F00E71CFF = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 17A618E91DA6061F00E71CFF;
+					};
+				};
+			};
+			buildConfigurationList = 17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "SocialPodcast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17A618E11DA6061F00E71CFF;
+			productRefGroup = 17A618EB1DA6061F00E71CFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17A618E91DA6061F00E71CFF /* SocialPodcast */,
+				17A618FF1DA6061F00E71CFF /* SocialPodcastTests */,
+				17A6190A1DA6061F00E71CFF /* SocialPodcastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17A618E81DA6061F00E71CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */,
+				17A618F71DA6061F00E71CFF /* Assets.xcassets in Resources */,
+				17A618F51DA6061F00E71CFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A618FE1DA6061F00E71CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A619091DA6061F00E71CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17A618E61DA6061F00E71CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */,
+				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
+				17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A618FC1DA6061F00E71CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A619071DA6061F00E71CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17A619021DA6061F00E71CFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A618E91DA6061F00E71CFF /* SocialPodcast */;
+			targetProxy = 17A619011DA6061F00E71CFF /* PBXContainerItemProxy */;
+		};
+		17A6190D1DA6061F00E71CFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A618E91DA6061F00E71CFF /* SocialPodcast */;
+			targetProxy = 17A6190C1DA6061F00E71CFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17A618F31DA6061F00E71CFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17A618F41DA6061F00E71CFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17A618F91DA6061F00E71CFF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17A619121DA6061F00E71CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17A619131DA6061F00E71CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17A619151DA6061F00E71CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SocialPodcast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17A619161DA6061F00E71CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SocialPodcast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		17A619181DA6061F00E71CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SocialPodcastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialPodcast.app/SocialPodcast";
+			};
+			name = Debug;
+		};
+		17A619191DA6061F00E71CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SocialPodcastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialPodcast.app/SocialPodcast";
+			};
+			name = Release;
+		};
+		17A6191B1DA6061F00E71CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SocialPodcastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SocialPodcast;
+			};
+			name = Debug;
+		};
+		17A6191C1DA6061F00E71CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SocialPodcastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SocialPodcast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "SocialPodcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A619121DA6061F00E71CFF /* Debug */,
+				17A619131DA6061F00E71CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A619151DA6061F00E71CFF /* Debug */,
+				17A619161DA6061F00E71CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A619181DA6061F00E71CFF /* Debug */,
+				17A619191DA6061F00E71CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A6191B1DA6061F00E71CFF /* Debug */,
+				17A6191C1DA6061F00E71CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17A618E21DA6061F00E71CFF /* Project object */;
+}
