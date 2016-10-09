@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171054CC1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
+		171054CD1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
+		171054CE1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
 		17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618ED1DA6061F00E71CFF /* AppDelegate.swift */; };
 		17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618EF1DA6061F00E71CFF /* FirstViewController.swift */; };
 		17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* SecondViewController.swift */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171054CB1DAA04C3001847A9 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				17A618EF1DA6061F00E71CFF /* FirstViewController.swift */,
 				17A618F11DA6061F00E71CFF /* SecondViewController.swift */,
 				17A618F31DA6061F00E71CFF /* Main.storyboard */,
+				171054CB1DAA04C3001847A9 /* Search.storyboard */,
 				17A618F61DA6061F00E71CFF /* Assets.xcassets */,
 				17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */,
 				17A618FB1DA6061F00E71CFF /* Info.plist */,
@@ -237,6 +242,7 @@
 			files = (
 				17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */,
 				17A618F71DA6061F00E71CFF /* Assets.xcassets in Resources */,
+				171054CC1DAA04C3001847A9 /* Search.storyboard in Resources */,
 				17A618F51DA6061F00E71CFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171054CD1DAA04C3001847A9 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171054CE1DAA04C3001847A9 /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +517,7 @@
 				17A619161DA6061F00E71CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				17A619191DA6061F00E71CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				17A6191C1DA6061F00E71CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
