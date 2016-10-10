@@ -10,6 +10,8 @@
 		171054CC1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
 		171054CD1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
 		171054CE1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
+		171054D21DAA0C4A001847A9 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */; };
+		171054D31DAA0C4A001847A9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171054D11DAA0C4A001847A9 /* SWXMLHash.framework */; };
 		17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618ED1DA6061F00E71CFF /* AppDelegate.swift */; };
 		17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618EF1DA6061F00E71CFF /* FirstViewController.swift */; };
 		17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* SecondViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		171054CB1DAA04C3001847A9 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		171054D11DAA0C4A001847A9 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
 		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171054D21DAA0C4A001847A9 /* SwiftyJSON.framework in Frameworks */,
+				171054D31DAA0C4A001847A9 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171054CF1DAA0C4A001847A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */,
+				171054D11DAA0C4A001847A9 /* SWXMLHash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17A618E11DA6061F00E71CFF = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,7 @@
 				17A619031DA6061F00E71CFF /* SocialPodcastTests */,
 				17A6190E1DA6061F00E71CFF /* SocialPodcastUITests */,
 				17A618EB1DA6061F00E71CFF /* Products */,
+				171054CF1DAA0C4A001847A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +159,7 @@
 				17A618E61DA6061F00E71CFF /* Sources */,
 				17A618E71DA6061F00E71CFF /* Frameworks */,
 				17A618E81DA6061F00E71CFF /* Resources */,
+				171054D41DAA0E1B001847A9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -264,6 +281,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171054D41DAA0E1B001847A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17A618E61DA6061F00E71CFF /* Sources */ = {
@@ -424,6 +459,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;
@@ -436,6 +477,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;

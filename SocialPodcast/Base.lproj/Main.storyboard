@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,16 +18,26 @@
                     <view key="view" contentMode="scaleToFill" id="mLa-WQ-qi8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhh-eG-79l">
+                                <connections>
+                                    <segue destination="zVx-zQ-aDX" kind="show" id="nne-eU-BIC"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qhh-eG-79l" secondAttribute="trailing" constant="-16" id="WLc-Lw-WEM"/>
+                            <constraint firstItem="Qhh-eG-79l" firstAttribute="leading" secondItem="mLa-WQ-qi8" secondAttribute="leadingMargin" constant="-16" id="aRm-fo-9nJ"/>
+                            <constraint firstItem="Qhh-eG-79l" firstAttribute="top" secondItem="mLa-WQ-qi8" secondAttribute="topMargin" id="ggw-73-EEf"/>
+                            <constraint firstItem="h0s-L2-4HT" firstAttribute="top" secondItem="Qhh-eG-79l" secondAttribute="bottom" id="wiH-ab-UCg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" id="DTN-H5-q2F"/>
-                    <connections>
-                        <segue destination="zVx-zQ-aDX" kind="show" identifier="searchSegue" id="Jlq-YO-HNO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dg-ze-Hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="-724"/>
+            <point key="canvasLocation" x="101.59999999999999" y="-724.58770614692662"/>
         </scene>
         <!--Search-->
         <scene sceneID="DQa-jj-eqT">
@@ -34,7 +45,7 @@
                 <viewControllerPlaceholder storyboardName="Search" id="zVx-zQ-aDX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDa-EH-WLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-479" y="-550"/>
+            <point key="canvasLocation" x="102" y="-290"/>
         </scene>
         <!--Playing-->
         <scene sceneID="hNz-n2-bh7">
