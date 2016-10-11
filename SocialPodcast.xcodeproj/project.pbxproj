@@ -22,6 +22,7 @@
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
 		17FBFC021DACBBF1004A4871 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC001DACBBF1004A4871 /* Api.swift */; };
 		17FBFC031DACBBF1004A4871 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC011DACBBF1004A4871 /* Client.swift */; };
+		17FBFC061DACBE68004A4871 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC051DACBE68004A4871 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17FBFC001DACBBF1004A4871 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = lib/Api.swift; sourceTree = "<group>"; };
 		17FBFC011DACBBF1004A4871 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = lib/Client.swift; sourceTree = "<group>"; };
+		17FBFC051DACBE68004A4871 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				17FBFC001DACBBF1004A4871 /* Api.swift */,
 				17FBFC011DACBBF1004A4871 /* Client.swift */,
+				17FBFC051DACBE68004A4871 /* Request.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */,
+				17FBFC061DACBE68004A4871 /* Request.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
 				17FBFC021DACBBF1004A4871 /* Api.swift in Sources */,
 				17FBFC031DACBBF1004A4871 /* Client.swift in Sources */,
