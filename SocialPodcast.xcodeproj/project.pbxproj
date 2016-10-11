@@ -20,6 +20,8 @@
 		17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */; };
 		17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */; };
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
+		17FBFC021DACBBF1004A4871 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC001DACBBF1004A4871 /* Api.swift */; };
+		17FBFC031DACBBF1004A4871 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC011DACBBF1004A4871 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialPodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FBFC001DACBBF1004A4871 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = lib/Api.swift; sourceTree = "<group>"; };
+		17FBFC011DACBBF1004A4871 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = lib/Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		17A618EC1DA6061F00E71CFF /* SocialPodcast */ = {
 			isa = PBXGroup;
 			children = (
+				17FBFC041DACBBF7004A4871 /* Api */,
 				17A618ED1DA6061F00E71CFF /* AppDelegate.swift */,
 				17A618EF1DA6061F00E71CFF /* FirstViewController.swift */,
 				17A618F11DA6061F00E71CFF /* SecondViewController.swift */,
@@ -147,6 +152,15 @@
 				17A619111DA6061F00E71CFF /* Info.plist */,
 			);
 			path = SocialPodcastUITests;
+			sourceTree = "<group>";
+		};
+		17FBFC041DACBBF7004A4871 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				17FBFC001DACBBF1004A4871 /* Api.swift */,
+				17FBFC011DACBBF1004A4871 /* Client.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +321,8 @@
 			files = (
 				17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
+				17FBFC021DACBBF1004A4871 /* Api.swift in Sources */,
+				17FBFC031DACBBF1004A4871 /* Client.swift in Sources */,
 				17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
