@@ -12,6 +12,8 @@
 		171054CE1DAA04C3001847A9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 171054CB1DAA04C3001847A9 /* Search.storyboard */; };
 		171054D21DAA0C4A001847A9 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */; };
 		171054D31DAA0C4A001847A9 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171054D11DAA0C4A001847A9 /* SWXMLHash.framework */; };
+		179E6DE61DAD959B004D5894 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 179E6DE51DAD959B004D5894 /* Cartfile */; };
+		179E6DE81DAD9676004D5894 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */; };
 		17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618ED1DA6061F00E71CFF /* AppDelegate.swift */; };
 		17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618EF1DA6061F00E71CFF /* FirstViewController.swift */; };
 		17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* SecondViewController.swift */; };
@@ -42,10 +44,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		179E6DE91DAD96AF004D5894 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		171054CB1DAA04C3001847A9 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		171054D11DAA0C4A001847A9 /* SWXMLHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWXMLHash.framework; path = Carthage/Build/iOS/SWXMLHash.framework; sourceTree = "<group>"; };
+		179E6DE51DAD959B004D5894 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = Carthage/Build/iOS/SwiftHTTP.framework; sourceTree = "<group>"; };
 		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179E6DE81DAD9676004D5894 /* SwiftHTTP.framework in Frameworks */,
 				171054D21DAA0C4A001847A9 /* SwiftyJSON.framework in Frameworks */,
 				171054D31DAA0C4A001847A9 /* SWXMLHash.framework in Frameworks */,
 			);
@@ -95,6 +112,7 @@
 		171054CF1DAA0C4A001847A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */,
 				171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */,
 				171054D11DAA0C4A001847A9 /* SWXMLHash.framework */,
 			);
@@ -104,6 +122,7 @@
 		17A618E11DA6061F00E71CFF = {
 			isa = PBXGroup;
 			children = (
+				179E6DE51DAD959B004D5894 /* Cartfile */,
 				17A618EC1DA6061F00E71CFF /* SocialPodcast */,
 				17A619031DA6061F00E71CFF /* SocialPodcastTests */,
 				17A6190E1DA6061F00E71CFF /* SocialPodcastUITests */,
@@ -177,6 +196,7 @@
 				17A618E71DA6061F00E71CFF /* Frameworks */,
 				17A618E81DA6061F00E71CFF /* Resources */,
 				171054D41DAA0E1B001847A9 /* ShellScript */,
+				179E6DE91DAD96AF004D5894 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -274,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179E6DE61DAD959B004D5894 /* Cartfile in Resources */,
 				17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */,
 				17A618F71DA6061F00E71CFF /* Assets.xcassets in Resources */,
 				171054CC1DAA04C3001847A9 /* Search.storyboard in Resources */,
