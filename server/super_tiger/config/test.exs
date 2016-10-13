@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :super_tiger, SuperTiger.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
-  password: "",
+  password: "root",
   database: "super_tiger_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

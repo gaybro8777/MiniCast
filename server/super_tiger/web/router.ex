@@ -20,7 +20,18 @@ defmodule SuperTiger.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", SuperTiger do
-  #   pipe_through :api
-  # end
+  scope "/api", SuperTiger do
+    pipe_through :api
+
+    resources "/devices", DeviceController, except: [:new, :edit]
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/podcasts", PodcastController, except: [:new, :edit]
+  end
+
+  use ExAdmin.Router
+  # your app's routes
+  scope "/admin", ExAdmin do
+    pipe_through :browser
+    admin_routes
+  end
 end
