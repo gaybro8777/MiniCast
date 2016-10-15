@@ -12,14 +12,21 @@ class Api {
     var client: Client
     
     init() {
-        client = Client("public-api-token")
+        client = Client(token: "public-api-token")
     }
     
-    func me() {
-        request('me', Request())
+    func me()-> Response {
+        return execute(request: Request())
     }
     
-    func request(path: String, request: Request) Response {
+    func podcasts()-> Response {
+        return PodcastsResponse(self.execute(request: Request())
+    }
     
+    
+    
+    func execute(request: Request)-> Response {
+        // self.client.execute()
+        return Response()
     }
 }

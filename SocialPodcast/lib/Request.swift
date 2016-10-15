@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import SwiftHTTP
 
 class Request {
     var method: String = "GET"
     var path: String = "/"
     
     var query: [String:String] = [:]
-    var body: [String:ValueType] = [:]
+    var body: HTTPParameterProtocol?
+    
+    init(method: String, path: String) {
+        self.method = method
+        self.path = path
+    }
+    
     
 }

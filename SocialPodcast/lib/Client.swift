@@ -9,5 +9,10 @@
 import Foundation
 
 class Client {
+    var token: String
+    
+    init(token: String) {
+        self.token = token
+    }
     
 }

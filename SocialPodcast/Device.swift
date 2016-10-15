@@ -1,13 +1,13 @@
 //
-//  Response.swift
+//  Device.swift
 //  SocialPodcast
 //
-//  Created by Vinh Nguyen on 10/11/16.
+//  Created by Vinh Nguyen on 10/13/16.
 //  Copyright © 2016 Axcoto. All rights reserved.
 //
 
 import Foundation
 
-class Response {
+class Device {
     
 }
