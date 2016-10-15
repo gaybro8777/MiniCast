@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftHTTP
 
 class Api {
     var client: Client
@@ -15,18 +16,27 @@ class Api {
         client = Client(token: "public-api-token")
     }
     
-    func me()-> Response {
-        return execute(request: Request())
+    func me(_ onFinish:@escaping ((MeResponse) -> Void)) {
+        return execute(request: Request(method: "GET", path: "me"), {(response: SwiftHTTP.Response) -> Void in
+            onFinish(MeResponse(response))
+        })
     }
     
-    func podcasts()-> Response {
-        return PodcastsResponse(self.execute(request: Request())
-    }
-    
-    
-    
-    func execute(request: Request)-> Response {
+    func execute(request: Request, _ onFinish:@escaping ((SwiftHTTP.Response) -> Void)) {
         // self.client.execute()
-        return Response()
+        do {
+            let opt = try HTTP.GET("https://google.com")
+            opt.start { response in
+                if let err = response.error {
+                    print("error: \(err.localizedDescription)")
+                    return //also notify app of failure as needed
+                }
+                print("opt finished: \(response.description)")
+                //print("data is: \(response.data)") access the response of the data with response.data
+                onFinish(response)
+            }
+        } catch let error {
+            print("got an error creating the request: \(error)")
+        }
     }
 }
