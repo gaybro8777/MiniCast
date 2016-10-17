@@ -20,13 +20,15 @@
 		179E6DE81DAD9676004D5894 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */; };
 		17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618ED1DA6061F00E71CFF /* AppDelegate.swift */; };
 		17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618EF1DA6061F00E71CFF /* FirstViewController.swift */; };
-		17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* SecondViewController.swift */; };
+		17A618F21DA6061F00E71CFF /* MyPodCastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A618F11DA6061F00E71CFF /* MyPodCastsViewController.swift */; };
 		17A618F51DA6061F00E71CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F31DA6061F00E71CFF /* Main.storyboard */; };
 		17A618F71DA6061F00E71CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F61DA6061F00E71CFF /* Assets.xcassets */; };
 		17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */; };
 		17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */; };
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
 		17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */; };
+		17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D21DB2142C003D04B0 /* Handshake.swift */; };
+		17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D41DB21705003D04B0 /* ApiManager.swift */; };
 		17FBFC021DACBBF1004A4871 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC001DACBBF1004A4871 /* Api.swift */; };
 		17FBFC031DACBBF1004A4871 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC011DACBBF1004A4871 /* Client.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +75,7 @@
 		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		17A618F11DA6061F00E71CFF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		17A618F11DA6061F00E71CFF /* MyPodCastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodCastsViewController.swift; sourceTree = "<group>"; };
 		17A618F41DA6061F00E71CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17A618F61DA6061F00E71CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A618F91DA6061F00E71CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,8 @@
 		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeResponse.swift; path = lib/MeResponse.swift; sourceTree = "<group>"; };
+		17BEB2D21DB2142C003D04B0 /* Handshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
+		17BEB2D41DB21705003D04B0 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lib/ApiManager.swift; sourceTree = "<group>"; };
 		17FBFC001DACBBF1004A4871 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = lib/Api.swift; sourceTree = "<group>"; };
 		17FBFC011DACBBF1004A4871 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = lib/Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,11 +172,12 @@
 		17A618EC1DA6061F00E71CFF /* SocialPodcast */ = {
 			isa = PBXGroup;
 			children = (
+				17BEB2D11DB21351003D04B0 /* Services */,
 				177CF0171DB0A9B600E91FA7 /* Model */,
 				17FBFC041DACBBF7004A4871 /* Api */,
 				17A618ED1DA6061F00E71CFF /* AppDelegate.swift */,
 				17A618EF1DA6061F00E71CFF /* FirstViewController.swift */,
-				17A618F11DA6061F00E71CFF /* SecondViewController.swift */,
+				17A618F11DA6061F00E71CFF /* MyPodCastsViewController.swift */,
 				17A618F31DA6061F00E71CFF /* Main.storyboard */,
 				177CF0141DB0A55E00E91FA7 /* Login.storyboard */,
 				171054CB1DAA04C3001847A9 /* Search.storyboard */,
@@ -201,6 +206,14 @@
 			path = SocialPodcastUITests;
 			sourceTree = "<group>";
 		};
+		17BEB2D11DB21351003D04B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				17BEB2D21DB2142C003D04B0 /* Handshake.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		17FBFC041DACBBF7004A4871 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +222,7 @@
 				17FBFC001DACBBF1004A4871 /* Api.swift */,
 				17FBFC011DACBBF1004A4871 /* Client.swift */,
 				176942B91DADF23C00F66C54 /* Response.swift */,
+				17BEB2D41DB21705003D04B0 /* ApiManager.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -373,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A618F21DA6061F00E71CFF /* SecondViewController.swift in Sources */,
+				17A618F21DA6061F00E71CFF /* MyPodCastsViewController.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
 				17FBFC021DACBBF1004A4871 /* Api.swift in Sources */,
+				17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */,
 				17FBFC031DACBBF1004A4871 /* Client.swift in Sources */,
 				176942BC1DADF25200F66C54 /* Request.swift in Sources */,
+				17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */,
 				17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */,
 				176942BA1DADF23C00F66C54 /* Response.swift in Sources */,
 				177CF0191DB0A9CA00E91FA7 /* Device.swift in Sources */,

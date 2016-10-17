@@ -10,6 +10,7 @@ import Foundation
 import SwiftHTTP
 
 class MeResponse {
+    
     init(_ response:SwiftHTTP.Response) {
         
     }
