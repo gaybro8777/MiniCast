@@ -19,6 +19,11 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        podcastsTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        podcastsTable.delegate = self
+        podcastsTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +40,7 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
         apiManager?.api.me({(response: MeResponse) -> Void in
             print(response)
         })
+        
     }
     
     
