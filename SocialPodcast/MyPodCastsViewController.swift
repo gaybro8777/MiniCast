@@ -8,8 +8,13 @@
 
 import UIKit
 
-class MyPodcastsViewController: UIViewController {
+class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var apiManager: ApiManager?;
+    var podcasts: [String] = ["Ruby Rogue", "Go time"]
+
+    
+    @IBOutlet var podcastsTable: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +36,21 @@ class MyPodcastsViewController: UIViewController {
             print(response)
         })
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return podcasts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = podcastsTable.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        
+        cell.textLabel?.text = podcasts[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("User select \(indexPath.row)" )
+    }
 }
-
