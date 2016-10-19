@@ -21,9 +21,12 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        podcastsTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        //podcastsTable.register(UITableViewCell.self, forCellReuseIdentifier: "PodcastCell")
+        
         podcastsTable.delegate = self
+        podcastsTable.dataSource = self
         podcastsTable.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,14 +52,22 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = podcastsTable.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        let cell: UITableViewCell = podcastsTable.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = podcasts[indexPath.row]
+        if let nameLabel = cell.viewWithTag(200) as? UILabel {
+            nameLabel.text = podcasts[indexPath.row]
+        }
+        
+        if let countLabel = cell.viewWithTag(300) as? UILabel{
+            countLabel.text = "2"
+        }
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("User select \(indexPath.row)" )
+        
     }
 }
