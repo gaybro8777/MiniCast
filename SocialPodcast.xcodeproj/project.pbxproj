@@ -27,6 +27,7 @@
 		17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */; };
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
 		17B8F36C1DB83525006CCDAC /* Podcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B8F36A1DB83525006CCDAC /* Podcast.storyboard */; };
+		17B8F36E1DB885DE006CCDAC /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */; };
 		17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */; };
 		17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D21DB2142C003D04B0 /* Handshake.swift */; };
 		17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D41DB21705003D04B0 /* ApiManager.swift */; };
@@ -88,6 +89,7 @@
 		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B8F36B1DB83525006CCDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Podcast.storyboard; sourceTree = "<group>"; };
+		17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeResponse.swift; path = lib/MeResponse.swift; sourceTree = "<group>"; };
 		17BEB2D21DB2142C003D04B0 /* Handshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
 		17BEB2D41DB21705003D04B0 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lib/ApiManager.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				17A618F11DA6061F00E71CFF /* MyPodCastsViewController.swift */,
 				17A618F31DA6061F00E71CFF /* Main.storyboard */,
 				17B8F36A1DB83525006CCDAC /* Podcast.storyboard */,
+				17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */,
 				177CF0141DB0A55E00E91FA7 /* Login.storyboard */,
 				171054CB1DAA04C3001847A9 /* Search.storyboard */,
 				17A618F61DA6061F00E71CFF /* Assets.xcassets */,
@@ -240,7 +243,7 @@
 				17A618E61DA6061F00E71CFF /* Sources */,
 				17A618E71DA6061F00E71CFF /* Frameworks */,
 				17A618E81DA6061F00E71CFF /* Resources */,
-				171054D41DAA0E1B001847A9 /* ShellScript */,
+				171054D41DAA0E1B001847A9 /* Run Script */,
 				179E6DE91DAD96AF004D5894 /* CopyFiles */,
 			);
 			buildRules = (
@@ -300,6 +303,7 @@
 				TargetAttributes = {
 					17A618E91DA6061F00E71CFF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 456HYLV3SG;
 						ProvisioningStyle = Automatic;
 					};
 					17A618FF1DA6061F00E71CFF = {
@@ -368,7 +372,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		171054D41DAA0E1B001847A9 /* ShellScript */ = {
+		171054D41DAA0E1B001847A9 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,6 +382,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftHTTP.framework",
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +402,7 @@
 				17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */,
 				17FBFC031DACBBF1004A4871 /* Client.swift in Sources */,
 				176942BC1DADF25200F66C54 /* Request.swift in Sources */,
+				17B8F36E1DB885DE006CCDAC /* EpisodesViewController.swift in Sources */,
 				17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */,
 				17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */,
 				176942BA1DADF23C00F66C54 /* Response.swift in Sources */,
@@ -570,14 +576,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 456HYLV3SG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.tigercast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -588,14 +594,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 456HYLV3SG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.tigercast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -19,11 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhh-eG-79l">
-                                <connections>
-                                    <segue destination="zVx-zQ-aDX" kind="show" id="nne-eU-BIC"/>
-                                </connections>
-                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qhh-eG-79l"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -38,14 +34,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Dg-ze-Hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1046" y="-790"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="DQa-jj-eqT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="zVx-zQ-aDX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nDa-EH-WLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1046" y="-448"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="hNz-n2-bh7">
@@ -64,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="-214"/>
+            <point key="canvasLocation" x="1046" y="-134"/>
         </scene>
         <!--My Podcasts-->
         <scene sceneID="wg7-f3-ORb">
@@ -123,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767.20000000000005" y="609.44527736131943"/>
+            <point key="canvasLocation" x="1046" y="555"/>
         </scene>
         <!--Podcast-->
         <scene sceneID="Mqg-ap-YU6">
@@ -131,7 +119,7 @@
                 <viewControllerPlaceholder storyboardName="Podcast" id="tSd-kD-zHb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yy-ce-mp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="609"/>
+            <point key="canvasLocation" x="1670" y="554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yCR-gN-cqK">
