@@ -1,0 +1,10 @@
+framework module Jukebox {
+  umbrella header "Jukebox.h"
+
+  export *
+  module * { export * }
+}
+
+module Jukebox.Swift {
+    header "Jukebox-Swift.h"
+}

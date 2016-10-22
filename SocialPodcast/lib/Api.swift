@@ -22,6 +22,16 @@ class Api {
         })
     }
     
+    func podcasts(_ onFinish:@escaping ((MeResponse) -> Void)) {
+        return execute(request: Request(method: "GET", path: "me"), {(response: SwiftHTTP.Response) -> Void in
+            onFinish(MeResponse(response))
+        })
+    }
+    
+    
+    
+    
+    
     func execute(request: Request, _ onFinish:@escaping ((SwiftHTTP.Response) -> Void)) {
         // self.client.execute()
         do {

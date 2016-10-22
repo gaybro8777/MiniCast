@@ -28,6 +28,13 @@
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
 		17B8F36C1DB83525006CCDAC /* Podcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B8F36A1DB83525006CCDAC /* Podcast.storyboard */; };
 		17B8F36E1DB885DE006CCDAC /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */; };
+		17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */; };
+		17BAEE191DBAE0E600945821 /* Jukebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BAEE181DBAE0E600945821 /* Jukebox.framework */; };
+		17BAEE1B1DBAE51200945821 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1A1DBAE51200945821 /* Container.swift */; };
+		17BAEE1D1DBAE57000945821 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1C1DBAE57000945821 /* Player.swift */; };
+		17BAEE1F1DBAE61200945821 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1E1DBAE61200945821 /* Episode.swift */; };
+		17BAEE211DBAE67800945821 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE201DBAE67800945821 /* Podcast.swift */; };
+		17BAEE241DBAE7CE00945821 /* ContainerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE231DBAE7CE00945821 /* ContainerService.swift */; };
 		17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */; };
 		17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D21DB2142C003D04B0 /* Handshake.swift */; };
 		17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D41DB21705003D04B0 /* ApiManager.swift */; };
@@ -90,6 +97,13 @@
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B8F36B1DB83525006CCDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Podcast.storyboard; sourceTree = "<group>"; };
 		17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PodcastsRequest.swift; path = lib/PodcastsRequest.swift; sourceTree = "<group>"; };
+		17BAEE181DBAE0E600945821 /* Jukebox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jukebox.framework; path = Carthage/Build/iOS/Jukebox.framework; sourceTree = "<group>"; };
+		17BAEE1A1DBAE51200945821 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Container.swift; path = lib/Container.swift; sourceTree = "<group>"; };
+		17BAEE1C1DBAE57000945821 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = lib/Player.swift; sourceTree = "<group>"; };
+		17BAEE1E1DBAE61200945821 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Episode.swift; path = lib/Player/Episode.swift; sourceTree = "<group>"; };
+		17BAEE201DBAE67800945821 /* Podcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Podcast.swift; path = lib/Player/Podcast.swift; sourceTree = "<group>"; };
+		17BAEE231DBAE7CE00945821 /* ContainerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerService.swift; path = lib/ContainerService.swift; sourceTree = "<group>"; };
 		17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeResponse.swift; path = lib/MeResponse.swift; sourceTree = "<group>"; };
 		17BEB2D21DB2142C003D04B0 /* Handshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
 		17BEB2D41DB21705003D04B0 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lib/ApiManager.swift; sourceTree = "<group>"; };
@@ -104,6 +118,7 @@
 			files = (
 				179E6DE81DAD9676004D5894 /* SwiftHTTP.framework in Frameworks */,
 				171054D21DAA0C4A001847A9 /* SwiftyJSON.framework in Frameworks */,
+				17BAEE191DBAE0E600945821 /* Jukebox.framework in Frameworks */,
 				171054D31DAA0C4A001847A9 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +143,7 @@
 		171054CF1DAA0C4A001847A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17BAEE181DBAE0E600945821 /* Jukebox.framework */,
 				179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */,
 				171054D01DAA0C4A001847A9 /* SwiftyJSON.framework */,
 				171054D11DAA0C4A001847A9 /* SWXMLHash.framework */,
@@ -147,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				177CF0181DB0A9CA00E91FA7 /* Device.swift */,
+				17BAEE1E1DBAE61200945821 /* Episode.swift */,
+				17BAEE201DBAE67800945821 /* Podcast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -187,6 +205,8 @@
 				17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */,
 				177CF0141DB0A55E00E91FA7 /* Login.storyboard */,
 				171054CB1DAA04C3001847A9 /* Search.storyboard */,
+				17BAEE1A1DBAE51200945821 /* Container.swift */,
+				17BAEE1C1DBAE57000945821 /* Player.swift */,
 				17A618F61DA6061F00E71CFF /* Assets.xcassets */,
 				17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */,
 				17A618FB1DA6061F00E71CFF /* Info.plist */,
@@ -212,10 +232,19 @@
 			path = SocialPodcastUITests;
 			sourceTree = "<group>";
 		};
+		17BAEE151DBADE5500945821 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		17BEB2D11DB21351003D04B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				17BEB2D21DB2142C003D04B0 /* Handshake.swift */,
+				17BAEE231DBAE7CE00945821 /* ContainerService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -223,6 +252,7 @@
 		17FBFC041DACBBF7004A4871 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				17BAEE151DBADE5500945821 /* Request */,
 				176942BD1DAE14BE00F66C54 /* Response */,
 				176942BB1DADF25200F66C54 /* Request.swift */,
 				17FBFC001DACBBF1004A4871 /* Api.swift */,
@@ -381,6 +411,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftHTTP.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Jukebox.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -397,16 +428,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A618F21DA6061F00E71CFF /* MyPodCastsViewController.swift in Sources */,
+				17BAEE211DBAE67800945821 /* Podcast.swift in Sources */,
+				17BAEE1F1DBAE61200945821 /* Episode.swift in Sources */,
+				17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
 				17FBFC021DACBBF1004A4871 /* Api.swift in Sources */,
 				17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */,
+				17BAEE241DBAE7CE00945821 /* ContainerService.swift in Sources */,
 				17FBFC031DACBBF1004A4871 /* Client.swift in Sources */,
 				176942BC1DADF25200F66C54 /* Request.swift in Sources */,
 				17B8F36E1DB885DE006CCDAC /* EpisodesViewController.swift in Sources */,
 				17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */,
 				17A618F01DA6061F00E71CFF /* FirstViewController.swift in Sources */,
 				176942BA1DADF23C00F66C54 /* Response.swift in Sources */,
+				17BAEE1B1DBAE51200945821 /* Container.swift in Sources */,
 				177CF0191DB0A9CA00E91FA7 /* Device.swift in Sources */,
+				17BAEE1D1DBAE57000945821 /* Player.swift in Sources */,
 				17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
