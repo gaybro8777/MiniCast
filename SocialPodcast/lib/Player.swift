@@ -10,6 +10,9 @@ import Foundation
 
 class Player {
     
+    func queueEpisode() {
+        
+    }
     
     func play() {
         

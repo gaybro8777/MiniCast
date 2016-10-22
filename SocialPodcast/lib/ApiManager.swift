@@ -9,11 +9,13 @@
 import Foundation
 
 class ApiManager {
-    var deviceId: String;
+    var deviceId: String?;
     var api: Api;
     
-    init(deviceId: String) {
-        self.deviceId = deviceId
+    init(deviceId: String?) {
+        if deviceId != nil {
+            self.deviceId = deviceId!
+        }
         self.api = Api()
     }
     

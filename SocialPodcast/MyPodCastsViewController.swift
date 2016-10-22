@@ -9,7 +9,8 @@
 import UIKit
 
 class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var apiManager: ApiManager?;
+    let apiManager = ContainerService🍼.sharedApiManager
+    
     var podcasts: [String] = ["Ruby Rogue", "Go time"]
 
     
@@ -36,11 +37,8 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidAppear(_ animated: Bool){
         print(UIDevice.current.identifierForVendor!.uuidString)
-        if apiManager == nil {
-            apiManager = ApiManager(deviceId: UIDevice.current.identifierForVendor!.uuidString)
-        }
         
-        apiManager?.api.me({(response: MeResponse) -> Void in
+        apiManager.api.me({(response: MeResponse) -> Void in
             print(response)
         })
         

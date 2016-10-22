@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ContainerService.swift
 //  SocialPodcast
 //
 //  Created by Vinh Nguyen on 10/21/16.
@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
-class ContainerService {
 
+// Credit: http://krakendev.io/blog/the-right-way-to-write-a-singleton
+class ContainerService🍼 {
+    static let sharedApiManager = ApiManager(deviceId: UIDevice.current.identifierForVendor!.uuidString)
+    
+    static let player = Player()
 }
