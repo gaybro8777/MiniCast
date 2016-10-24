@@ -17,9 +17,9 @@
 import UIKit
 import Jukebox
 
-class EpisodesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, JukeboxDelegate {
+class EpisodesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var apiManager: ApiManager?;
-    var episodes: [String] = ["Taylor Otwell - Patterns for Simplifying Laravel Applications", "51: Matt Wynne - Building the Right Thing with BDD"]
+    var episodes: [Episode] = []
     
     
     @IBOutlet var episodesTable: UITableView!
@@ -28,6 +28,21 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.episodes = [
+            Episode(
+                title: "Taylor Otwell - Patterns for Simplifying Laravel Applications",
+                guid: "1",
+                link: "",
+                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/49940.mp3", length: 120)
+            ),
+            Episode(
+                title: "51: Matt Wynne - Building the Right Thing with BDD",
+                guid: "2",
+                link: "",
+                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/49208.mp3", length: 1678)
+            ),
+        ]
+            
         episodesTable.delegate = self
         episodesTable.dataSource = self
         episodesTable.reloadData()
@@ -60,7 +75,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
         let cell: UITableViewCell = episodesTable.dequeueReusableCell(withIdentifier: "EpisodeCell", for: indexPath) as UITableViewCell
         
         if let nameLabel = cell.viewWithTag(100) as? UILabel {
-            nameLabel.text = episodes[indexPath.row]
+            nameLabel.text = episodes[indexPath.row].title
         }
         
         if let countLabel = cell.viewWithTag(300) as? UILabel{
@@ -72,30 +87,12 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("User select \(indexPath.row)" )
-        getPlayer(url: "https://audio.simplecast.com/49940.mp3")?.play()
+        getPlayer().enqueueEpisode(episodes[indexPath.row]);
     }
     
-    private func getPlayer(url: String) -> Jukebox? {
-        // configure jukebox
-        let jukebox = Jukebox(delegate: self, items: [
-            JukeboxItem(URL: NSURL(string: url)! as URL),
-            JukeboxItem(URL: NSURL(string: url)! as URL)
-            ])
-        return jukebox
-    }
     
-    // Jukebox event
-    func jukeboxStateDidChange(_ state : Jukebox) {
-        
-    }
-    func jukeboxPlaybackProgressDidChange(_ jukebox : Jukebox) {
-        
-    }
-    func jukeboxDidLoadItem(_ jukebox : Jukebox, item : JukeboxItem) {
-        
-    }
-    func jukeboxDidUpdateMetadata(_ jukebox : Jukebox, forItem: JukeboxItem) {
-        
+    // Private helper functions
+    private func getPlayer() -> Player {
+        return ContainerService🍼.player
     }
 }

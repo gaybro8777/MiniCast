@@ -81,7 +81,7 @@
 		177CF0181DB0A9CA00E91FA7 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		179E6DE51DAD959B004D5894 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		179E6DE71DAD9676004D5894 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = Carthage/Build/iOS/SwiftHTTP.framework; sourceTree = "<group>"; };
-		17A618EA1DA6061F00E71CFF /* SocialPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A618EA1DA6061F00E71CFF /* MiniCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A618ED1DA6061F00E71CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A618EF1DA6061F00E71CFF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		17A618F11DA6061F00E71CFF /* MyPodCastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodCastsViewController.swift; sourceTree = "<group>"; };
@@ -89,10 +89,10 @@
 		17A618F61DA6061F00E71CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A618F91DA6061F00E71CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A618FB1DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialPodcastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A619001DA6061F00E71CFF /* MiniCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastTests.swift; sourceTree = "<group>"; };
 		17A619061DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialPodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A6190B1DA6061F00E71CFF /* MiniCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B8F36B1DB83525006CCDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Podcast.storyboard; sourceTree = "<group>"; };
@@ -184,9 +184,9 @@
 		17A618EB1DA6061F00E71CFF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17A618EA1DA6061F00E71CFF /* SocialPodcast.app */,
-				17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */,
-				17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */,
+				17A618EA1DA6061F00E71CFF /* MiniCast.app */,
+				17A619001DA6061F00E71CFF /* MiniCastTests.xctest */,
+				17A6190B1DA6061F00E71CFF /* MiniCastUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17A618E91DA6061F00E71CFF /* SocialPodcast */ = {
+		17A618E91DA6061F00E71CFF /* MiniCast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcast" */;
+			buildConfigurationList = 17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCast" */;
 			buildPhases = (
 				17A618E61DA6061F00E71CFF /* Sources */,
 				17A618E71DA6061F00E71CFF /* Frameworks */,
@@ -280,14 +280,14 @@
 			);
 			dependencies = (
 			);
-			name = SocialPodcast;
+			name = MiniCast;
 			productName = SocialPodcast;
-			productReference = 17A618EA1DA6061F00E71CFF /* SocialPodcast.app */;
+			productReference = 17A618EA1DA6061F00E71CFF /* MiniCast.app */;
 			productType = "com.apple.product-type.application";
 		};
-		17A618FF1DA6061F00E71CFF /* SocialPodcastTests */ = {
+		17A618FF1DA6061F00E71CFF /* MiniCastTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastTests" */;
+			buildConfigurationList = 17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCastTests" */;
 			buildPhases = (
 				17A618FC1DA6061F00E71CFF /* Sources */,
 				17A618FD1DA6061F00E71CFF /* Frameworks */,
@@ -298,14 +298,14 @@
 			dependencies = (
 				17A619021DA6061F00E71CFF /* PBXTargetDependency */,
 			);
-			name = SocialPodcastTests;
+			name = MiniCastTests;
 			productName = SocialPodcastTests;
-			productReference = 17A619001DA6061F00E71CFF /* SocialPodcastTests.xctest */;
+			productReference = 17A619001DA6061F00E71CFF /* MiniCastTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		17A6190A1DA6061F00E71CFF /* SocialPodcastUITests */ = {
+		17A6190A1DA6061F00E71CFF /* MiniCastUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastUITests" */;
+			buildConfigurationList = 17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCastUITests" */;
 			buildPhases = (
 				17A619071DA6061F00E71CFF /* Sources */,
 				17A619081DA6061F00E71CFF /* Frameworks */,
@@ -316,9 +316,9 @@
 			dependencies = (
 				17A6190D1DA6061F00E71CFF /* PBXTargetDependency */,
 			);
-			name = SocialPodcastUITests;
+			name = MiniCastUITests;
 			productName = SocialPodcastUITests;
-			productReference = 17A6190B1DA6061F00E71CFF /* SocialPodcastUITests.xctest */;
+			productReference = 17A6190B1DA6061F00E71CFF /* MiniCastUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +348,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "SocialPodcast" */;
+			buildConfigurationList = 17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "MiniCast" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -361,9 +361,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17A618E91DA6061F00E71CFF /* SocialPodcast */,
-				17A618FF1DA6061F00E71CFF /* SocialPodcastTests */,
-				17A6190A1DA6061F00E71CFF /* SocialPodcastUITests */,
+				17A618E91DA6061F00E71CFF /* MiniCast */,
+				17A618FF1DA6061F00E71CFF /* MiniCastTests */,
+				17A6190A1DA6061F00E71CFF /* MiniCastUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -469,12 +469,12 @@
 /* Begin PBXTargetDependency section */
 		17A619021DA6061F00E71CFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17A618E91DA6061F00E71CFF /* SocialPodcast */;
+			target = 17A618E91DA6061F00E71CFF /* MiniCast */;
 			targetProxy = 17A619011DA6061F00E71CFF /* PBXContainerItemProxy */;
 		};
 		17A6190D1DA6061F00E71CFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17A618E91DA6061F00E71CFF /* SocialPodcast */;
+			target = 17A618E91DA6061F00E71CFF /* MiniCast */;
 			targetProxy = 17A6190C1DA6061F00E71CFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -620,7 +620,7 @@
 				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.tigercast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.minicast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -638,7 +638,7 @@
 				);
 				INFOPLIST_FILE = SocialPodcast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.tigercast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.minicast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -654,7 +654,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialPodcast.app/SocialPodcast";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniCast.app/MiniCast";
 			};
 			name = Debug;
 		};
@@ -668,7 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.axcoto.SocialPodcastTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialPodcast.app/SocialPodcast";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniCast.app/MiniCast";
 			};
 			name = Release;
 		};
@@ -701,7 +701,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "SocialPodcast" */ = {
+		17A618E51DA6061F00E71CFF /* Build configuration list for PBXProject "MiniCast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A619121DA6061F00E71CFF /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcast" */ = {
+		17A619141DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A619151DA6061F00E71CFF /* Debug */,
@@ -719,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastTests" */ = {
+		17A619171DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCastTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A619181DA6061F00E71CFF /* Debug */,
@@ -728,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "SocialPodcastUITests" */ = {
+		17A6191A1DA6061F00E71CFF /* Build configuration list for PBXNativeTarget "MiniCastUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17A6191B1DA6061F00E71CFF /* Debug */,

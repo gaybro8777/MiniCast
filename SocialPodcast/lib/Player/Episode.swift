@@ -10,7 +10,7 @@ import Foundation
 
 struct EpisodeEnclosure {
     let url: String?
-    let length: String?
+    let length: Int
 }
 
 struct Episode {
@@ -20,5 +20,15 @@ struct Episode {
     let enclosure: EpisodeEnclosure?
     let author: String?
     let pubDate: String?
-    let description: String?    
+    let description: String?
+    
+    init(title: String, guid: String? = nil, link: String? = nil, enclosure: EpisodeEnclosure? = nil, author: String? = nil, pubDate: String? = nil, description: String? = nil) {
+        self.title = title
+        self.guid = guid
+        self.link = link
+        self.enclosure = enclosure
+        self.author = author
+        self.pubDate = pubDate
+        self.description = description
+    }
 }

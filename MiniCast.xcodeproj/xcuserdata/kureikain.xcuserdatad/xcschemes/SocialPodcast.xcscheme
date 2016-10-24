@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17A618E91DA6061F00E71CFF"
-               BuildableName = "SocialPodcast.app"
-               BlueprintName = "SocialPodcast"
-               ReferencedContainer = "container:SocialPodcast.xcodeproj">
+               BuildableName = "MiniCast.app"
+               BlueprintName = "MiniCast"
+               ReferencedContainer = "container:MiniCast.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17A618FF1DA6061F00E71CFF"
-               BuildableName = "SocialPodcastTests.xctest"
-               BlueprintName = "SocialPodcastTests"
-               ReferencedContainer = "container:SocialPodcast.xcodeproj">
+               BuildableName = "MiniCastTests.xctest"
+               BlueprintName = "MiniCastTests"
+               ReferencedContainer = "container:MiniCast.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17A6190A1DA6061F00E71CFF"
-               BuildableName = "SocialPodcastUITests.xctest"
-               BlueprintName = "SocialPodcastUITests"
-               ReferencedContainer = "container:SocialPodcast.xcodeproj">
+               BuildableName = "MiniCastUITests.xctest"
+               BlueprintName = "MiniCastUITests"
+               ReferencedContainer = "container:MiniCast.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17A618E91DA6061F00E71CFF"
-            BuildableName = "SocialPodcast.app"
-            BlueprintName = "SocialPodcast"
-            ReferencedContainer = "container:SocialPodcast.xcodeproj">
+            BuildableName = "MiniCast.app"
+            BlueprintName = "MiniCast"
+            ReferencedContainer = "container:MiniCast.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17A618E91DA6061F00E71CFF"
-            BuildableName = "SocialPodcast.app"
-            BlueprintName = "SocialPodcast"
-            ReferencedContainer = "container:SocialPodcast.xcodeproj">
+            BuildableName = "MiniCast.app"
+            BlueprintName = "MiniCast"
+            ReferencedContainer = "container:MiniCast.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17A618E91DA6061F00E71CFF"
-            BuildableName = "SocialPodcast.app"
-            BlueprintName = "SocialPodcast"
-            ReferencedContainer = "container:SocialPodcast.xcodeproj">
+            BuildableName = "MiniCast.app"
+            BlueprintName = "MiniCast"
+            ReferencedContainer = "container:MiniCast.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

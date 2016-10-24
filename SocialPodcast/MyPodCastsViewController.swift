@@ -60,7 +60,6 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
             countLabel.text = "2"
         }
         
-        
         return cell
     }
     
