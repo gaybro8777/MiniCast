@@ -15,4 +15,13 @@ struct Podcast {
     let lastBuildDate: String?
     let link: String?
     let image: String?
+    
+    init(title: String? = nil, description: String? = nil, pubDate: String? = nil, lastBuildDate: String? = nil, link: String? = nil, image: String? = nil) {
+        self.title = title
+        self.description = description
+        self.pubDate = pubDate
+        self.lastBuildDate = lastBuildDate
+        self.link = link
+        self.image = image
+    }
 }

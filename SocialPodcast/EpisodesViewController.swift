@@ -33,13 +33,13 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
                 title: "Taylor Otwell - Patterns for Simplifying Laravel Applications",
                 guid: "1",
                 link: "",
-                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/49940.mp3", length: 120)
+                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/49208.mp3", length: 120)
             ),
             Episode(
                 title: "51: Matt Wynne - Building the Right Thing with BDD",
                 guid: "2",
                 link: "",
-                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/49208.mp3", length: 1678)
+                enclosure: EpisodeEnclosure(url: "https://audio.simplecast.com/37051.mp3", length: 1678)
             ),
         ]
             
@@ -92,7 +92,7 @@ class EpisodesViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     // Private helper functions
-    private func getPlayer() -> Player {
+    private func getPlayer() -> PlayerController {
         return ContainerService🍼.player
     }
 }

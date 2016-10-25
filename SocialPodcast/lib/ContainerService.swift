@@ -14,5 +14,5 @@ import UIKit
 class ContainerService🍼 {
     static let sharedApiManager = ApiManager(deviceId: UIDevice.current.identifierForVendor!.uuidString)
     
-    static let player = Player()
+    static let player = PlayerController()
 }

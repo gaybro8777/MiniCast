@@ -31,7 +31,7 @@
 		17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */; };
 		17BAEE191DBAE0E600945821 /* Jukebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BAEE181DBAE0E600945821 /* Jukebox.framework */; };
 		17BAEE1B1DBAE51200945821 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1A1DBAE51200945821 /* Container.swift */; };
-		17BAEE1D1DBAE57000945821 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1C1DBAE57000945821 /* Player.swift */; };
+		17BAEE1D1DBAE57000945821 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1C1DBAE57000945821 /* PlayerController.swift */; };
 		17BAEE1F1DBAE61200945821 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE1E1DBAE61200945821 /* Episode.swift */; };
 		17BAEE211DBAE67800945821 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE201DBAE67800945821 /* Podcast.swift */; };
 		17BAEE241DBAE7CE00945821 /* ContainerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE231DBAE7CE00945821 /* ContainerService.swift */; };
@@ -100,7 +100,7 @@
 		17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PodcastsRequest.swift; path = lib/PodcastsRequest.swift; sourceTree = "<group>"; };
 		17BAEE181DBAE0E600945821 /* Jukebox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Jukebox.framework; path = Carthage/Build/iOS/Jukebox.framework; sourceTree = "<group>"; };
 		17BAEE1A1DBAE51200945821 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Container.swift; path = lib/Container.swift; sourceTree = "<group>"; };
-		17BAEE1C1DBAE57000945821 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = lib/Player.swift; sourceTree = "<group>"; };
+		17BAEE1C1DBAE57000945821 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerController.swift; path = lib/PlayerController.swift; sourceTree = "<group>"; };
 		17BAEE1E1DBAE61200945821 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Episode.swift; path = lib/Player/Episode.swift; sourceTree = "<group>"; };
 		17BAEE201DBAE67800945821 /* Podcast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Podcast.swift; path = lib/Player/Podcast.swift; sourceTree = "<group>"; };
 		17BAEE231DBAE7CE00945821 /* ContainerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerService.swift; path = lib/ContainerService.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 				177CF0141DB0A55E00E91FA7 /* Login.storyboard */,
 				171054CB1DAA04C3001847A9 /* Search.storyboard */,
 				17BAEE1A1DBAE51200945821 /* Container.swift */,
-				17BAEE1C1DBAE57000945821 /* Player.swift */,
+				17BAEE1C1DBAE57000945821 /* PlayerController.swift */,
 				17A618F61DA6061F00E71CFF /* Assets.xcassets */,
 				17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */,
 				17A618FB1DA6061F00E71CFF /* Info.plist */,
@@ -443,7 +443,7 @@
 				176942BA1DADF23C00F66C54 /* Response.swift in Sources */,
 				17BAEE1B1DBAE51200945821 /* Container.swift in Sources */,
 				177CF0191DB0A9CA00E91FA7 /* Device.swift in Sources */,
-				17BAEE1D1DBAE57000945821 /* Player.swift in Sources */,
+				17BAEE1D1DBAE57000945821 /* PlayerController.swift in Sources */,
 				17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

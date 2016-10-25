@@ -11,7 +11,7 @@ import UIKit
 class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let apiManager = ContainerService🍼.sharedApiManager
     
-    var podcasts: [String] = ["Ruby Rogue", "Go time"]
+    var podcasts: [Podcast]?
 
     
     @IBOutlet var podcastsTable: UITableView!
@@ -23,11 +23,15 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         //podcastsTable.register(UITableViewCell.self, forCellReuseIdentifier: "PodcastCell")
+        podcasts = [
+            Podcast(title: "Ruby Rogue"),
+            Podcast(title: "Greater than code"),
+            Podcast(title: "Go time"),
+        ]
         
         podcastsTable.delegate = self
         podcastsTable.dataSource = self
         podcastsTable.reloadData()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,14 +50,18 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return podcasts.count
+        if podcasts == nil {
+            return 0
+        } else {
+            return podcasts!.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = podcastsTable.dequeueReusableCell(withIdentifier: "PodcastCell", for: indexPath) as UITableViewCell
         
         if let nameLabel = cell.viewWithTag(200) as? UILabel {
-            nameLabel.text = podcasts[indexPath.row]
+            nameLabel.text = podcasts?[indexPath.row].title
         }
         
         if let countLabel = cell.viewWithTag(300) as? UILabel{
@@ -64,7 +72,6 @@ class MyPodcastsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("User select \(indexPath.row)" )
-        
+        print("Load podcast at: \(indexPath.row)")
     }
 }
