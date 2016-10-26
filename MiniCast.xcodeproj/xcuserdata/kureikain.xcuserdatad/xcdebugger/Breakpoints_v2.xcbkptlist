@@ -58,7 +58,7 @@
                   moduleName = "MiniCast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/MeResponse.swift"
-                  timestampString = "499069634.412228"
+                  timestampString = "499152898.297612"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -73,7 +73,7 @@
                   moduleName = "MiniCast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/MeResponse.swift"
-                  timestampString = "499069634.414315"
+                  timestampString = "499152898.300763"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -161,38 +161,6 @@
             endingLineNumber = "67"
             landmarkName = "enqueueEpisode(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniCast.Player.enqueueEpisode (MiniCast.Episode) -&gt; ()"
-                  moduleName = "MiniCast"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/Player.swift"
-                  timestampString = "499069634.43377"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "6126">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniCast.Player.enqueueEpisode (MiniCast.Episode) -&gt; ()"
-                  moduleName = "MiniCast"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/Player.swift"
-                  timestampString = "499069634.437499"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "10240">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -225,38 +193,6 @@
             endingLineNumber = "28"
             landmarkName = "init(frame:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniCast.Player.init (frame : __C.CGRect) -&gt; MiniCast.Player"
-                  moduleName = "MiniCast"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/Player.swift"
-                  timestampString = "499069634.473934"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "63">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MiniCast.Player.__allocating_init (frame : __C.CGRect) -&gt; MiniCast.Player"
-                  moduleName = "MiniCast"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kureikain/Sites/SocialPodcast/SocialPodcast/lib/Player.swift"
-                  timestampString = "499069634.476297"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -288,6 +224,22 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "addPlayerView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialPodcast/lib/PlayerController.swift"
+            timestampString = "499152747.946681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -21,9 +21,12 @@ class PlayerController: UIView, JukeboxDelegate {
     var status: String = "ready"
     var lastItem: Episode? = nil
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    let playerViewHeight: CGFloat = 50
+    
     init() {
         // configure jukebox
-        super.init(frame: CGRect(x: 0, y: 400, width: 400, height: 100))
+        super.init(frame: CGRect(x: 0, y: screenSize.height - playerViewHeight, width: screenSize.width, height: playerViewHeight))
         self.addPlayerView()
     }
     
@@ -37,18 +40,18 @@ class PlayerController: UIView, JukeboxDelegate {
     }
     
     func addPlayerView() {
-        titleLbl.frame = CGRect(x: 0, y:0, width: 50, height: 20)
+        titleLbl.frame = CGRect(x: 50, y:0, width: 300, height: 50)
         titleLbl.backgroundColor = UIColor.white
         titleLbl.textAlignment = NSTextAlignment.center
         titleLbl.text = "Init"
         self.addSubview(titleLbl)
         
-        controlBtn.frame=CGRect(x: 60, y:10, width: 30, height: 10)
+        controlBtn.frame=CGRect(x: 0, y:0, width: 50, height: 50)
         controlBtn.backgroundColor=UIColor.red
         
         controlBtn.setTitle("Play", for: UIControlState.normal)
         
-        controlBtn.addTarget(self, action: #selector(play), for: UIControlEvents.touchUpInside)
+        controlBtn.addTarget(self, action: #selector(togglePlayer), for: UIControlEvents.touchUpInside)
         self.addSubview(controlBtn)
         
         UIApplication.shared.keyWindow?.addSubview(self)
@@ -78,6 +81,16 @@ class PlayerController: UIView, JukeboxDelegate {
         }
         
         self.play()
+    }
+    
+    func togglePlayer() {
+        if status == "playing" {
+            controlBtn.setTitle("Stop", for: UIControlState.normal)
+            self.stop()
+        } else {
+            controlBtn.setTitle("Playing", for: UIControlState.normal)
+            self.play()
+        }
     }
     
     func play() {
