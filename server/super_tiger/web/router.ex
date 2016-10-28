@@ -25,7 +25,9 @@ defmodule SuperTiger.Router do
 
     resources "/devices", DeviceController, except: [:new, :edit]
     resources "/users", UserController, except: [:new, :edit]
-    resources "/podcasts", PodcastController, except: [:new, :edit]
+    resources "/podcasts", PodcastController, except: [:new, :edit] do
+      resources "/eposides", EpisodeController
+    end
   end
 
   use ExAdmin.Router

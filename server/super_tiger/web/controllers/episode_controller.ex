@@ -2,6 +2,17 @@ defmodule SuperTiger.EpisodeController do
   use SuperTiger.Web, :controller
 
   alias SuperTiger.Episode
+  plug :assign_podcast
+
+  defp assign_podcast(conn, _opts) do
+    case conn.params do
+      %{"podcast_id" => podcast_id} ->
+        podcast = Repo.get(SuperTiger.Podcast, podcast_id)
+        assign(conn, :podcast, podcast)
+      _ ->
+        conn
+    end
+  end
 
   def index(conn, _params) do
     episodes = Repo.all(Episode)
@@ -15,7 +26,7 @@ defmodule SuperTiger.EpisodeController do
       {:ok, episode} ->
         conn
         |> put_status(:created)
-        |> put_resp_header("location", episode_path(conn, :show, episode))
+        |> put_resp_header("location", podcast_episode_path(conn, :show, 1, episode)) # TODO pass cprrect parent podcast
         |> render("show.json", episode: episode)
       {:error, changeset} ->
         conn
