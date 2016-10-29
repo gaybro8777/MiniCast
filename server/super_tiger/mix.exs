@@ -38,6 +38,9 @@ defmodule SuperTiger.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:ex_admin, github: "smpallen99/ex_admin"},
+     {:httpoison, "~> 0.9.2"},
+     {:floki, "~> 0.11"},
+     #{:hound, "~> 1.0.2"}, # test
      {:cowboy, "~> 1.0"}]
   end
 

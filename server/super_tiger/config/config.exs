@@ -31,6 +31,7 @@ config :ex_admin,
     SuperTiger.ExAdmin.User,
     SuperTiger.ExAdmin.Device,
     SuperTiger.ExAdmin.Episode,
+    SuperTiger.ExAdmin.Category,
   ]
 
 # Import environment specific config. This must remain at the bottom
