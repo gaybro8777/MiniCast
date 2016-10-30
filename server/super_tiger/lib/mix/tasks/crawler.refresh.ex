@@ -7,17 +7,22 @@ defmodule Mix.Tasks.Crawler.Refresh do
   @shortdoc "Start refresh podcast data"
 
   @moduledoc """
-    Parse itunes data, update category, sub link. feed
+  Parse itunes data, update category, sub link. feed
   """
 
-  def run(_args) do
+  def run(args) do
     Mix.shell.info "Start procesing!"
-    #ensure_repo(repo, _args)
-    #ensure_started(Repo)
+    repos = parse_repo(args)
 
-    #podcast = Repo.get(SuperTiger.Podcast, 1)
-    #IO.puts podcast
-    SuperTiger.Crawler.Itunes.Home.get_category
+    Enum.each repos, fn repo ->
+      ensure_repo(repo, args)
+      ensure_started(repo, [{:pool_size, 10}])
+      #users = repo.all(Ectotask.User)
+
+      #Enum.each(users, fn(s) -> IO.puts(s.name) end)
+      SuperTiger.Crawler.Itunes.Home.get_category(repo)
+    end
+    #SuperTiger.Crawler.Itunes.Home.get_podcast
   end
 
 
