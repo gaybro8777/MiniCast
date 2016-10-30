@@ -4,6 +4,7 @@ defmodule SuperTiger.Category do
   schema "categories" do
     field :name, :string
     field :parent_id, :integer
+    field :url, :string
 
     timestamps()
   end
