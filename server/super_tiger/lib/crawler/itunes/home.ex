@@ -8,6 +8,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
 
   def get_podcast do
     prepare
+
     Mix.shell.info "Start crawl podcast"
   end
 
@@ -28,9 +29,18 @@ defmodule SuperTiger.Crawler.Itunes.Home do
     end
   end
 
+  defp selector(id) do
+    case id do
+      "1" ->
+        "#genre-nav .top-level-genre"
+      _ ->
+        ".top-level-subgenres a"
+    end
+  end
+
   def process_category(repo, url, parent_id) do
     get_url(url)
-    |> Floki.find("#genre-nav .top-level-genre")
+    |> Floki.find(selector(parent_id))
     |> Enum.map(fn(item) ->
         url = Floki.attribute(item, "href") |> List.first
         id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
@@ -42,7 +52,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
           parent_id: parent_id
         }
 
-         IO.inspect category
+        IO.inspect category
         check_existe_category = SuperTiger.Repo.one(from p in SuperTiger.Category, where: p.category_id == ^category.category_id and p.parent_id == ^category.parent_id, select: count("*"))
 
         if check_existe_category == 0 do #0 && category.category_id != category.parent_id do
@@ -54,9 +64,10 @@ defmodule SuperTiger.Crawler.Itunes.Home do
             _ ->
               Mix.shell.info "#{category[:name]} is existed"
           end
-          Task.async(fn() ->
-              process_category(repo, url, category.category_id)
-            end)
+        end
+
+        if parent_id == "1" do
+          Task.async(fn() -> process_category(repo, url, category.category_id) end)
         end
       end)
     |> Enum.map(fn(t) -> if t do Task.await(t) end; end)
