@@ -17,12 +17,10 @@ defmodule Mix.Tasks.Crawler.Refresh do
     Enum.each repos, fn repo ->
       ensure_repo(repo, args)
       ensure_started(repo, [{:pool_size, 10}])
-      #users = repo.all(Ectotask.User)
 
-      #Enum.each(users, fn(s) -> IO.puts(s.name) end)
-      SuperTiger.Crawler.Itunes.Home.get_category(repo)
+      #SuperTiger.Crawler.Itunes.Home.get_category(repo)
+      SuperTiger.Crawler.Itunes.Home.get_podcast(repo)
     end
-    #SuperTiger.Crawler.Itunes.Home.get_podcast
   end
 
 

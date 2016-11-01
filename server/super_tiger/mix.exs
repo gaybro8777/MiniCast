@@ -19,6 +19,7 @@ defmodule SuperTiger.Mixfile do
   def application do
     [mod: {SuperTiger, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+                    :scrivener_ecto,
                     :phoenix_ecto, :mariaex]]
   end
 
@@ -41,6 +42,7 @@ defmodule SuperTiger.Mixfile do
      {:httpoison, "~> 0.9.2"},
      {:floki, "~> 0.11"},
      #{:hound, "~> 1.0.2"}, # test
+     {:scrivener_ecto, [env: :prod, git: "https://github.com/drewolson/scrivener_ecto.git"]},
      {:cowboy, "~> 1.0"}]
   end
 

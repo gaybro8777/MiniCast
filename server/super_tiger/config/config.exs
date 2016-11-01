@@ -32,6 +32,7 @@ config :ex_admin,
     SuperTiger.ExAdmin.Device,
     SuperTiger.ExAdmin.Episode,
     SuperTiger.ExAdmin.Category,
+    SuperTiger.ExAdmin.FailedRefresh,
   ]
 
 # Import environment specific config. This must remain at the bottom

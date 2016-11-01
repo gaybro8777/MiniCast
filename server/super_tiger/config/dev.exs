@@ -40,4 +40,8 @@ config :super_tiger, SuperTiger.Repo,
   password: "root",
   database: "super_tiger_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  # Increase timeout to help when we run crawl task
+  # TODO: We should onluy increase this during crawl mix task
+  timeout: 60_000,
+  pool_timeout: 60_000
