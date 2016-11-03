@@ -3,8 +3,13 @@ defmodule SuperTiger.PodcastController do
 
   alias SuperTiger.Podcast
 
-  def index(conn, _params) do
-    podcasts = Repo.all(Podcast)
+  def index(conn, params) do
+    podcasts =
+      #Repo.all(Podcast)
+      SuperTiger.Podcast
+      |> order_by(desc: :id)
+      |> SuperTiger.Repo.paginate(params)
+
     render(conn, "index.json", podcasts: podcasts)
   end
 

@@ -9,5 +9,7 @@ defmodule SuperTiger.Repo.Migrations.CreatePodcast do
       timestamps()
     end
 
+    create_index(:podcasts, [:name])
+    create_index(:podcasts, [:url])
   end
 end

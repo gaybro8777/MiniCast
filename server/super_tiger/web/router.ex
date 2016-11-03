@@ -29,6 +29,7 @@ defmodule SuperTiger.Router do
     resources "/podcasts", PodcastController, except: [:new, :edit] do
       resources "/eposides", EpisodeController
     end
+    resources "/fail_refreshes", FailedRefreshController, except: [:new, :edit]
   end
 
   use ExAdmin.Router
