@@ -14,7 +14,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
 
     repo.all(SuperTiger.Category)
       |> Enum.each(fn(category) -> process_podcast(repo, category) end)
-    #|> Enum.each(fn(category) -> spawn(fn -> process_podcast(repo, category) end) end)
+      #|> Enum.each(fn(category) -> spawn(fn -> process_podcast(repo, category) end) end)
   end
 
   # Crawl category
@@ -83,30 +83,35 @@ defmodule SuperTiger.Crawler.Itunes.Home do
       "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
       "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "*"
     ]
-    |> Enum.map(fn(letter) ->
-      IO.puts "Start finding podcast in #{category.name}, letter: #{letter}"
-
-      try do
-        get_url("#{category.url}&letter=#{letter}")
-        |>find_page_link
-        |> Enum.map(fn(page) ->
-        IO.puts "Found page: #{page}"
-        find_podcast_on_page("#{category.url}&letter=#{letter}&page=#{page}")
-          |> Enum.map(fn(podcast) ->
-            create_podcast(%SuperTiger.Podcast{
-              url: podcast[:url],
-              name: podcast[:name]
-            })
-          end)
-        end)
-      rescue
-        e in RuntimeError -> SuperTiger.Repo.insert(%SuperTiger.FailedRefresh{
-                              name: "podcast",
-                              url:  elem(e, 1)
-                              })
-      end
+    |> Enum.each(fn(letter) ->
+      #spawn(__MODULE__, :process_podcast_with_letter, [repo, category, letter])
+      process_podcast_with_letter(repo, category, letter)
     end)
   end
+
+  def process_podcast_with_letter(repo, category, letter) do
+    IO.puts "Start finding podcast in #{category.name}, letter: #{letter}"
+    try do
+      get_url("#{category.url}&letter=#{letter}")
+      |>find_page_link
+      |> Enum.map(fn(page) ->
+      IO.puts "Found page: #{page}"
+      find_podcast_on_page("#{category.url}&letter=#{letter}&page=#{page}")
+        |> Enum.map(fn(podcast) ->
+          create_podcast(%SuperTiger.Podcast{
+            url: podcast[:url],
+            name: podcast[:name]
+          })
+        end)
+      end)
+    rescue
+      e in RuntimeError -> SuperTiger.Repo.insert(%SuperTiger.FailedRefresh{
+                            name: "podcast",
+                            url:  elem(e, 1)
+                            })
+    end
+  end
+
 
   def find_page_link(body) do
     # TODO Find a way to support .not selectpr
