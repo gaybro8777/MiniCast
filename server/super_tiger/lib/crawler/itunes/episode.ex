@@ -2,19 +2,23 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
   use Mix.Task
   import Ecto.Query
 
+  defmodule ItunePodcast do
+    @derive [Poison.Encoder]
+    defstruct [:resultCount, :results]
+  end
+
   def prepare do
     HTTPoison.start
   end
 
   # Crawl podcast
-  def get_episode(repo) do
+  def get_feed(repo) do
     prepare
 
-    Mix.shell.info "Start crawl podcast"
+    Mix.shell.info "Start crawl podcast's feed"
 
-    repo.all(SuperTiger.Category)
-      |> Enum.each(fn(category) -> process_podcast(repo, category) end)
-      #|> Enum.each(fn(category) -> spawn(fn -> process_podcast(repo, category) end) end)
+    repo.all(SuperTiger.Podcast)
+      |> Enum.each(fn(podcast) -> process_podcast_feed(repo, podcast) end)
   end
 
   def get_url(url, attempt \\ 1) do
@@ -31,53 +35,29 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
     end
   end
 
-  def process_category(repo, url, parent_id) do
-    get_url(url)
-    |> Floki.find(selector(parent_id))
-    |> Enum.map(fn(item) ->
-      url = Floki.attribute(item, "href") |> List.first
-      id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
-
-      category = %SuperTiger.Category{
-        category_id: id["id"],
-        name: Floki.text(item),
-        url:  url,
-        parent_id: parent_id
-      }
-
-    IO.inspect category
-    check_existe_category = SuperTiger.Repo.one(from p in SuperTiger.Category, where: p.category_id == ^category.category_id and p.parent_id == ^category.parent_id, select: count("*"))
-
-    if check_existe_category == 0 do #0 && category.category_id != category.parent_id do
-      case SuperTiger.Repo.insert(category) do
-        {:ok, inserted_post} ->
-          Mix.shell.info "Inserted category"
-          IO.inspect inserted_post
-          Mix.shell.info "\n>>\n\n"
-        _ ->
-          Mix.shell.info "#{category[:name]} is existed"
-      end
-    end
-
-    if parent_id == "1" do
-      Task.async(fn() -> process_category(repo, url, category.category_id) end)
-    end
-    end)
-    |> Enum.map(fn(t) -> if t do Task.await(t) end; end)
-  end
-
   # Download podcast for category
-  def process_podcast(repo, category) do
-    IO.puts "Start finding podcast in #{category.name}"
-    [
-      "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O",
-      "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "*"
-    ]
-    |> Enum.each(fn(letter) ->
-      #spawn(__MODULE__, :process_podcast_with_letter, [repo, category, letter])
-      process_podcast_with_letter(repo, category, letter)
-    end)
+  def process_podcast_feed(repo, podcast) do
+    case String.split(podcast.url, "/id") do
+      [_, itune_id] ->
+        IO.puts "Start finding feedurl for #{itune_id}"
+
+        itune_data = get_url("https://itunes.apple.com/lookup?id=#{itune_id}")
+        itune_podcast = Poison.Parser.parse!(itune_data)
+        feed_url = List.first(itune_podcast["results"])["feedUrl"]
+        IO.puts feed_url
+        changeset = SuperTiger.Podcast.changeset(podcast, %{"feed_uri" => feed_url})
+        case SuperTiger.Repo.update(changeset) do
+          {:ok, p} ->
+            IO.puts "Update feed_uri for #{itune_id}. URL= #{feed_url}"
+          {:error, p } ->
+            IO.puts "Error"
+        end
+      _ ->
+        IO.puts "Invalid #{podcast.url}"
+    end
   end
+
+
 
   def process_podcast_with_letter(repo, category, letter) do
     IO.puts "Start finding podcast in #{category.name}, letter: #{letter}"

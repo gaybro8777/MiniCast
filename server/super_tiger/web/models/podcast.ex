@@ -4,6 +4,7 @@ defmodule SuperTiger.Podcast do
   schema "podcasts" do
     field :url, :string
     field :name, :string
+    field :feed_uri, :string
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule SuperTiger.Podcast do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:url, :name])
-    |> validate_required([:url, :name])
+    |> cast(params, [:url, :name, :feed_uri])
+    |> validate_required([:url, :name, :feed_uri])
   end
 end

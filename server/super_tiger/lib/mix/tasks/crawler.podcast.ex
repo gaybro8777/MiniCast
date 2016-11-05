@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Crawler.Refresh do
+defmodule Mix.Tasks.Crawler.Podcast do
   use Mix.Task
   import Mix.Ecto
 
@@ -18,7 +18,7 @@ defmodule Mix.Tasks.Crawler.Refresh do
       ensure_repo(repo, args)
       ensure_started(repo, [{:pool_size, 10}])
 
-      SuperTiger.Crawler.Itunes.Eposide.get_podcast(repo)
+      SuperTiger.Crawler.Itunes.Episode.get_feed(repo)
     end
   end
 
