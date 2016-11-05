@@ -16,14 +16,17 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
     prepare
 
     Mix.shell.info "Start crawl podcast's feed"
-
     total = SuperTiger.Repo.one(from p in SuperTiger.Podcast, where: is_nil(p.feed_uri), select: count("*"))
-    doc_per_batch = round(Float.ceil(total / 60))
+    doc_per_batch = round(Float.ceil(total / 1))
     IO.puts "Found #{total} podcast. Will run 60 batch. Doc per batch: #{doc_per_batch}"
-    for batch <- 1..60, do: get_feed_batch(repo, batch, doc_per_batch)
+    tasks = for batch <- 1..1, do: spawn(__MODULE__, :get_feed_batch, [self(), repo, batch, doc_per_batch])
+    receive do
+      m ->
+        IO.puts m
+    end
   end
 
-  def get_feed_batch(repo, batch, doc_per_batch) do
+  def get_feed_batch(wait_pid, repo, batch, doc_per_batch) do
     #repo.all(from p in SuperTiger.Podcast,
     #          where: is_nil(p.feed_uri),
     #          select: p)
@@ -38,12 +41,24 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
       |> Enum.each(fn(podcast) -> process_podcast_feed(repo, podcast) end)
   end
 
+  def wait do
+    receive do
+      {:ok, m} ->
+        IO.puts "OK: #{m}"
+        wait
+      {:error, m} ->
+        IO.puts "ERROR: #{m}"
+        wait
+    end
+  end
+
   def get_url(url, attempt \\ 1) do
     case HTTPoison.get url do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         {:ok, body}
       error ->
         if attempt == 3 do
+          IO.inspect error
           {:error, "Fail to get url. Ignore #{attempt}"}
         else
           IO.puts "Fail to get url. Retry: Attempt #{attempt+1}"
