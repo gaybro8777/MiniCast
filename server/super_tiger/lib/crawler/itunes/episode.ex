@@ -17,9 +17,10 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
 
     Mix.shell.info "Start crawl podcast's feed"
     total = SuperTiger.Repo.one(from p in SuperTiger.Podcast, where: is_nil(p.feed_uri), select: count("*"))
-    doc_per_batch = round(Float.ceil(total / 1))
+    batch_count = 10
+    doc_per_batch = round(Float.ceil(total / batch_count))
     IO.puts "Found #{total} podcast. Will run 60 batch. Doc per batch: #{doc_per_batch}"
-    tasks = for batch <- 1..1, do: spawn(__MODULE__, :get_feed_batch, [self(), repo, batch, doc_per_batch])
+    tasks = for batch <- 1..batch_count, do: spawn(__MODULE__, :get_feed_batch, [self(), repo, batch, doc_per_batch])
     receive do
       m ->
         IO.puts m
@@ -36,7 +37,7 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
       |> where([p], is_nil(p.feed_uri))
       |> order_by(:id)
       |> limit(^doc_per_batch)
-      |> offset(^(doc_per_batch * batch))
+      |> offset(^((doc_per_batch - 1) * batch))
     repo.all(query)
       |> Enum.each(fn(podcast) -> process_podcast_feed(repo, podcast) end)
   end
@@ -80,7 +81,8 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
             itune_podcast = Poison.Parser.parse!(itune_data)
             feed_url = List.first(itune_podcast["results"])["feedUrl"]
             IO.puts feed_url
-            spawn(__MODULE__, :update_podcast, [podcast, feed_url])
+            #spawn(__MODULE__, :update_podcast, [podcast, feed_url])
+            update_podcast(podcast, feed_url)
         end
       _ ->
         IO.puts "Invalid #{podcast.url}"
