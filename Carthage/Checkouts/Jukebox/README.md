@@ -16,7 +16,7 @@ Jukebox is an iOS audio player written in Swift.
 5. [Usage](#usage)
 6. [Handling remote events](#remote-events)
 7. [Public interface](#public-interface)
-8. [Delegation] (#delegation)
+8. [Delegation](#delegation)
 9. [License](#license)
 10. [Contact](#contact)
 
@@ -43,11 +43,7 @@ $ gem install cocoapods
 To integrate ``Jukebox`` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'Jukebox', '~> 0.2.0'
+pod 'Jukebox'
 ```
 
 Then, run the following command:

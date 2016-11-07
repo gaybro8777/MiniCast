@@ -2,3 +2,5 @@ github "drmohundro/SWXMLHash" ~> 3.0
 github "SwiftyJSON/SwiftyJSON"
 github "daltoniam/SwiftHTTP" >= 2.0.0
 github "teodorpatras/Jukebox"
+github "garriguv/SQLiteMigrationManager.swift"
+github "stephencelis/SQLite.swift" ~> 0.11.0
