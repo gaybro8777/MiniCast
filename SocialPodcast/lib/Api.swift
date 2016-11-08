@@ -10,6 +10,8 @@ import Foundation
 import SwiftHTTP
 
 class Api {
+    let apiEndpoint = "http://127.0.0.1:4000/api"
+    
     var client: Client
     
     init() {
@@ -22,9 +24,9 @@ class Api {
         })
     }
     
-    func podcasts(_ onFinish:@escaping ((MeResponse) -> Void)) {
-        return execute(request: Request(method: "GET", path: "me"), {(response: SwiftHTTP.Response) -> Void in
-            onFinish(MeResponse(response))
+    func podcasts(_ onFinish:@escaping ((PodcastResponse) -> Void)) {
+        return execute(request: Request(method: "GET", path: "podcasts?"), {(response: SwiftHTTP.Response) -> Void in
+            onFinish(PodcastResponse(response))
         })
     }
     

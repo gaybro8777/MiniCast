@@ -38,6 +38,8 @@
 		17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */; };
 		17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D21DB2142C003D04B0 /* Handshake.swift */; };
 		17BEB2D51DB21705003D04B0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BEB2D41DB21705003D04B0 /* ApiManager.swift */; };
+		17C33FAC1DCF011600EBFC83 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C33FAB1DCF011600EBFC83 /* LocalStorage.swift */; };
+		17E7F7BF1DD10ED900629C30 /* PodcastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F7BE1DD10ED900629C30 /* PodcastResponse.swift */; };
 		17FBFC021DACBBF1004A4871 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC001DACBBF1004A4871 /* Api.swift */; };
 		17FBFC031DACBBF1004A4871 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBFC011DACBBF1004A4871 /* Client.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +109,8 @@
 		17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeResponse.swift; path = lib/MeResponse.swift; sourceTree = "<group>"; };
 		17BEB2D21DB2142C003D04B0 /* Handshake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
 		17BEB2D41DB21705003D04B0 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lib/ApiManager.swift; sourceTree = "<group>"; };
+		17C33FAB1DCF011600EBFC83 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalStorage.swift; path = lib/LocalStorage.swift; sourceTree = "<group>"; };
+		17E7F7BE1DD10ED900629C30 /* PodcastResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PodcastResponse.swift; path = lib/PodcastResponse.swift; sourceTree = "<group>"; };
 		17FBFC001DACBBF1004A4871 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = lib/Api.swift; sourceTree = "<group>"; };
 		17FBFC011DACBBF1004A4871 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = lib/Client.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */,
+				17E7F7BE1DD10ED900629C30 /* PodcastResponse.swift */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			children = (
 				17BEB2D21DB2142C003D04B0 /* Handshake.swift */,
 				17BAEE231DBAE7CE00945821 /* ContainerService.swift */,
+				17C33FAB1DCF011600EBFC83 /* LocalStorage.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftHTTP.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Jukebox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
 			);
 			name = "Run Script";
 			outputPaths = (
@@ -432,6 +439,7 @@
 				17BAEE1F1DBAE61200945821 /* Episode.swift in Sources */,
 				17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
+				17E7F7BF1DD10ED900629C30 /* PodcastResponse.swift in Sources */,
 				17FBFC021DACBBF1004A4871 /* Api.swift in Sources */,
 				17BEB2D31DB2142C003D04B0 /* Handshake.swift in Sources */,
 				17BAEE241DBAE7CE00945821 /* ContainerService.swift in Sources */,
@@ -445,6 +453,7 @@
 				177CF0191DB0A9CA00E91FA7 /* Device.swift in Sources */,
 				17BAEE1D1DBAE57000945821 /* PlayerController.swift in Sources */,
 				17BEB2D01DB1FF1B003D04B0 /* MeResponse.swift in Sources */,
+				17C33FAC1DCF011600EBFC83 /* LocalStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
