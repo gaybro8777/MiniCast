@@ -6,6 +6,7 @@ defmodule SuperTiger.Category do
     field :parent_id, :string
     field :category_id, :string
     field :url, :string
+    has_many :podcasts, SuperTiger.Podcast
 
     timestamps()
   end
