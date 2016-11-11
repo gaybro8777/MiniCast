@@ -17,7 +17,7 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
 
     Mix.shell.info "Start crawl podcast's feed"
     total = SuperTiger.Repo.one(from p in SuperTiger.Podcast, where: is_nil(p.feed_uri), select: count("*"))
-    batch_count = 10
+    batch_count = 2
     doc_per_batch = round(Float.ceil(total / batch_count))
     IO.puts "Found #{total} podcast. Will run 60 batch. Doc per batch: #{doc_per_batch}"
     tasks = for batch <- 1..batch_count, do: spawn(__MODULE__, :get_feed_batch, [self(), repo, batch, doc_per_batch])
@@ -62,7 +62,8 @@ defmodule SuperTiger.Crawler.Itunes.Episode do
           IO.inspect error
           {:error, "Fail to get url. Ignore #{attempt}"}
         else
-          IO.puts "Fail to get url. Retry: Attempt #{attempt+1}"
+          IO.puts "Fail to get url. Sleep 1s. Then Retry: Attempt #{attempt+1}"
+          :timer.sleep(3000)
           get_url(url, attempt + 1)
         end
     end
