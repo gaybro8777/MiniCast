@@ -43,6 +43,7 @@ defmodule SuperTiger.Mixfile do
      {:floki, "~> 0.11"},
      #{:hound, "~> 1.0.2"}, # test
      {:scrivener_ecto, [env: :prod, git: "https://github.com/drewolson/scrivener_ecto.git"]},
+     {:comeonin, "~> 2.0"},
      {:cowboy, "~> 1.0"}]
   end
 
