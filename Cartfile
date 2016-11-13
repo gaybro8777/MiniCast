@@ -4,3 +4,4 @@ github "daltoniam/SwiftHTTP" >= 2.0.0
 github "teodorpatras/Jukebox"
 github "garriguv/SQLiteMigrationManager.swift"
 github "stephencelis/SQLite.swift" ~> 0.11.0
+github "davidstump/SwiftPhoenixClient"
