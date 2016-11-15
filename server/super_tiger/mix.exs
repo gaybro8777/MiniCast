@@ -20,7 +20,8 @@ defmodule SuperTiger.Mixfile do
     [mod: {SuperTiger, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :scrivener_ecto,
-                    :phoenix_ecto, :mariaex]]
+                    :phoenix_ecto, :mariaex,
+                    :comeonin]]
   end
 
   # Specifies which paths to compile per environment.

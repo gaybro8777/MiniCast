@@ -4,6 +4,8 @@ defmodule SuperTiger.User do
   schema "users" do
     field :name, :string
     field :email, :string
+    field :password_hash, :string
+    field :password, :string, virtual: true
     has_many :devices, SuperTiger.Device, on_replace: :delete
 
     timestamps()
