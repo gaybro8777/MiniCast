@@ -18,6 +18,7 @@ class Api {
         client = Client(token: "public-api-token")
     }
     
+    
     func me(_ onFinish:@escaping ((MeResponse) -> Void)) {
         return execute(request: Request(method: "GET", path: "me"), {(response: SwiftHTTP.Response) -> Void in
             onFinish(MeResponse(response))
@@ -30,8 +31,28 @@ class Api {
         })
     }
     
-    
-    
+    struct Category {
+        var id = 0
+        var name: String?
+        var parentID = 0
+        var categoryID = 0
+        var url = 0
+        
+        
+        func all(_ onFinish:@escaping ((CategoryResponse) -> Void)) {
+            return client.execute(request: Request(method: "GET", path: "category"),
+                           {(response: SwiftHTTP.Response) -> Void in
+                            onFinish(CategoryResponse(response))
+            })
+        }
+        
+        func one(idclient.: Int64, onFinish:@escaping ((CategoryResponse) -> Void)) {
+            return execute(request: Request(method: "GET", path: "category"),
+                           {(response: SwiftHTTP.Response) -> Void in
+                            onFinish(CategoryResponse(response))
+            })
+        }
+    }
     
     
     func execute(request: Request, _ onFinish:@escaping ((SwiftHTTP.Response) -> Void)) {

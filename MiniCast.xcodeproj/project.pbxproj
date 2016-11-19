@@ -26,6 +26,7 @@
 		17A618FA1DA6061F00E71CFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A618F81DA6061F00E71CFF /* LaunchScreen.storyboard */; };
 		17A619051DA6061F00E71CFF /* SocialPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A619041DA6061F00E71CFF /* SocialPodcastTests.swift */; };
 		17A619101DA6061F00E71CFF /* SocialPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */; };
+		17B0912A1DE0426600106B30 /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B091291DE0426600106B30 /* CategoryResponse.swift */; };
 		17B8F36C1DB83525006CCDAC /* Podcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B8F36A1DB83525006CCDAC /* Podcast.storyboard */; };
 		17B8F36E1DB885DE006CCDAC /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */; };
 		17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */; };
@@ -97,6 +98,7 @@
 		17A6190B1DA6061F00E71CFF /* MiniCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6190F1DA6061F00E71CFF /* SocialPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPodcastUITests.swift; sourceTree = "<group>"; };
 		17A619111DA6061F00E71CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B091291DE0426600106B30 /* CategoryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryResponse.swift; path = lib/CategoryResponse.swift; sourceTree = "<group>"; };
 		17B8F36B1DB83525006CCDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Podcast.storyboard; sourceTree = "<group>"; };
 		17B8F36D1DB885DE006CCDAC /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		17BAEE161DBADE7C00945821 /* PodcastsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PodcastsRequest.swift; path = lib/PodcastsRequest.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				17BEB2CF1DB1FF1B003D04B0 /* MeResponse.swift */,
+				17B091291DE0426600106B30 /* CategoryResponse.swift */,
 				17E7F7BE1DD10ED900629C30 /* PodcastResponse.swift */,
 			);
 			name = Response;
@@ -237,6 +240,17 @@
 			path = SocialPodcastUITests;
 			sourceTree = "<group>";
 		};
+		17B091281DE041ED00106B30 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				176942BB1DADF25200F66C54 /* Request.swift */,
+				17FBFC001DACBBF1004A4871 /* Api.swift */,
+				17FBFC011DACBBF1004A4871 /* Client.swift */,
+				176942B91DADF23C00F66C54 /* Response.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		17BAEE151DBADE5500945821 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +274,7 @@
 			children = (
 				17BAEE151DBADE5500945821 /* Request */,
 				176942BD1DAE14BE00F66C54 /* Response */,
-				176942BB1DADF25200F66C54 /* Request.swift */,
-				17FBFC001DACBBF1004A4871 /* Api.swift */,
-				17FBFC011DACBBF1004A4871 /* Client.swift */,
-				176942B91DADF23C00F66C54 /* Response.swift */,
+				17B091281DE041ED00106B30 /* Core */,
 				17BEB2D41DB21705003D04B0 /* ApiManager.swift */,
 			);
 			name = Api;
@@ -436,6 +447,7 @@
 			files = (
 				17A618F21DA6061F00E71CFF /* MyPodCastsViewController.swift in Sources */,
 				17BAEE211DBAE67800945821 /* Podcast.swift in Sources */,
+				17B0912A1DE0426600106B30 /* CategoryResponse.swift in Sources */,
 				17BAEE1F1DBAE61200945821 /* Episode.swift in Sources */,
 				17BAEE171DBADE7C00945821 /* PodcastsRequest.swift in Sources */,
 				17A618EE1DA6061F00E71CFF /* AppDelegate.swift in Sources */,
