@@ -12,12 +12,12 @@ import SwiftHTTP
 class Api {
     let apiEndpoint = "http://127.0.0.1:4000/api"
     
-    var client: Client
+    static client: Client?
     
-    init() {
+    
+    class func with(token: String) {
         client = Client(token: "public-api-token")
     }
-    
     
     func me(_ onFinish:@escaping ((MeResponse) -> Void)) {
         return execute(request: Request(method: "GET", path: "me"), {(response: SwiftHTTP.Response) -> Void in
@@ -43,6 +43,29 @@ class Api {
             return client.execute(request: Request(method: "GET", path: "category"),
                            {(response: SwiftHTTP.Response) -> Void in
                             onFinish(CategoryResponse(response))
+            })
+        }
+        
+        func one(idclient.: Int64, onFinish:@escaping ((CategoryResponse) -> Void)) {
+            return execute(request: Request(method: "GET", path: "category"),
+                           {(response: SwiftHTTP.Response) -> Void in
+                            onFinish(CategoryResponse(response))
+            })
+        }
+    }
+    
+    
+    struct Podcast {
+        let id = Int?
+        let url: String?
+        let name: String?
+        let categoryId: String?
+        
+        
+        func all(_ onFinish:@escaping ((CategoryResponse) -> Void)) {
+            return client.execute(request: Request(method: "GET", path: "category"),
+                                  {(response: SwiftHTTP.Response) -> Void in
+                                    onFinish(CategoryResponse(response))
             })
         }
         

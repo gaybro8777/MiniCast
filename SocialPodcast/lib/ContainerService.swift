@@ -12,7 +12,7 @@ import UIKit
 
 // Credit: http://krakendev.io/blog/the-right-way-to-write-a-singleton
 class ContainerService🍼 {
-    static let sharedApiManager = ApiManager(deviceId: UIDevice.current.identifierForVendor!.uuidString)
+    //static let sharedApiManager = ApiManager(deviceId: UIDevice.current.identifierForVendor!.uuidString)
     
     static let player = PlayerController()
     static let localStorage = LocalStorage()
