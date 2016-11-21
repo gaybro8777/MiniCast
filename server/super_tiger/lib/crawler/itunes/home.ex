@@ -100,7 +100,8 @@ defmodule SuperTiger.Crawler.Itunes.Home do
         |> Enum.map(fn(podcast) ->
           create_podcast(%SuperTiger.Podcast{
             url: podcast[:url],
-            name: podcast[:name]
+            name: podcast[:name],
+            category: category
           })
         end)
       end)
