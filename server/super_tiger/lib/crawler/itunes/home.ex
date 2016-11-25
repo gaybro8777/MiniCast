@@ -102,7 +102,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
             url: podcast[:url],
             name: podcast[:name],
             category: category,
-            podcast_id: podcast[:podcast_id],
+            source_id: podcast[:source_id],
           })
         end)
       end)
@@ -130,7 +130,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
     url = Floki.attribute(item, "href") |> List.first
     podcast_id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
     name = Floki.text(item)
-    %{:url => url, :name => name, :podcast_id => podcast_id[:id]}
+    %{:url => url, :name => name, :source_id => podcast_id[:id]}
     end)
   end
 

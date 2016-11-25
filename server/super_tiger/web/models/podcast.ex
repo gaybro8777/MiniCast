@@ -5,6 +5,7 @@ defmodule SuperTiger.Podcast do
     field :url, :string
     field :name, :string
     field :feed_uri, :string
+    field :source_id, :string
     belongs_to :category, SuperTiger.Category
 
     timestamps()
