@@ -101,7 +101,8 @@ defmodule SuperTiger.Crawler.Itunes.Home do
           create_podcast(%SuperTiger.Podcast{
             url: podcast[:url],
             name: podcast[:name],
-            category: category
+            category: category,
+            podcast_id: podcast[:podcast_id],
           })
         end)
       end)
@@ -127,15 +128,15 @@ defmodule SuperTiger.Crawler.Itunes.Home do
     |> Floki.find("#selectedcontent a")
     |> Enum.map(fn(item) ->
     url = Floki.attribute(item, "href") |> List.first
-    #podcast_id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
+    podcast_id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
     name = Floki.text(item)
-    %{:url => url, :name => name}
+    %{:url => url, :name => name, :podcast_id => podcast_id[:id]}
     end)
   end
 
   defp create_podcast(podcast) do
-    exist = SuperTiger.Repo.one(from p in SuperTiger.Podcast, where: p.url == ^podcast.url, select: count("*"))
-    if exist == 0 do
+    exist = SuperTiger.Repo.one(from p in SuperTiger.Podcast, where: p.url == ^podcast.url)
+    if exist == nil do
       case SuperTiger.Repo.insert(podcast) do
         {:ok, inserted_post} ->
           Mix.shell.info "Inserted podcast"
@@ -145,6 +146,9 @@ defmodule SuperTiger.Crawler.Itunes.Home do
         _ ->
           Mix.shell.info "#{podcast.name} is existed"
       end
+    else
+      changeset = SuperTiger.Podcast.changeset(exist, podcast)
+      SuperTiger.Repo.update(changeset)
     end
   end
 
