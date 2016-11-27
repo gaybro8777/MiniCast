@@ -147,7 +147,13 @@ defmodule SuperTiger.Crawler.Itunes.Home do
           Mix.shell.info "#{podcast.name} is existed"
       end
     else
-      changeset = SuperTiger.Podcast.changeset(exist, podcast)
+      Mix.shell.info "Update podcast #{podcast.url}"
+      changeset = SuperTiger.Podcast.changeset(exist, %{
+        :url => podcast.url,
+        :name => podcast.name,
+        :category => podcast.category,
+        :source_id => podcast.source_id,
+      })
       SuperTiger.Repo.update(changeset)
     end
   end
