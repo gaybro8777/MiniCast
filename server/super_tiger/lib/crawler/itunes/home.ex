@@ -98,7 +98,7 @@ defmodule SuperTiger.Crawler.Itunes.Home do
       IO.puts "Found page: #{page}"
       find_podcast_on_page("#{category.url}&letter=#{letter}&page=#{page}")
         |> Enum.map(fn(podcast) ->
-          create_podcast(%SuperTiger.Podcast{
+          create_podcast(%{
             url: podcast[:url],
             name: podcast[:name],
             category: category,
@@ -127,10 +127,10 @@ defmodule SuperTiger.Crawler.Itunes.Home do
     get_url(url)
     |> Floki.find("#selectedcontent a")
     |> Enum.map(fn(item) ->
-    url = Floki.attribute(item, "href") |> List.first
-    podcast_id =  Regex.named_captures(~r/\/id(?<id>\d+)\?/, url)
-    name = Floki.text(item)
-    %{:url => url, :name => name, :source_id => podcast_id[:id]}
+      url = Floki.attribute(item, "href") |> List.first
+      podcast_id =  Regex.named_captures(~r/\/id(?<id>\d+)(\?)?/, url)
+      name = Floki.text(item)
+      %{:url => url, :name => name, :source_id => podcast_id["id"]}
     end)
   end
 
@@ -147,9 +147,8 @@ defmodule SuperTiger.Crawler.Itunes.Home do
           Mix.shell.info "#{podcast.name} is existed"
       end
     else
-      Mix.shell.info "Update podcast #{podcast.url}"
-      IO.inspect  podcast
-      IO.inspect  exist
+      Mix.shell.info "Update podcast #{podcast.url} #{podcast.source_id}"
+      IO.inspect podcast
       changeset = SuperTiger.Podcast.changeset(exist, %{
         :url => podcast.url,
         :name => podcast.name,
