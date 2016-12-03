@@ -155,7 +155,27 @@ defmodule SuperTiger.Crawler.Itunes.Home do
         :category => podcast.category,
         :source_id => podcast.source_id,
       })
-      SuperTiger.Repo.update(changeset)
+      case SuperTiger.Repo.update(changeset) do
+        {:ok, p} ->
+          IO.inspect p
+        {:error, e} ->
+          IO.puts "Update fail "
+          IO.inspect e
+      end
+    else
+      Mix.shell.info "Update podcast #{podcast.url} #{podcast.source_id}"
+      IO.inspect podcast
+      changeset = SuperTiger.Podcast.changeset(exist, %{
+        :url => podcast.url,
+        :name => podcast.name,
+        :category => podcast.category,
+        :source_id => podcast.source_id,
+      })
+      case SuperTiger.Repo.update(changeset) do
+        {:ok, p} ->
+          IO.inspect p
+        _ ->
+      end
     end
   end
 
