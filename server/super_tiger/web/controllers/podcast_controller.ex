@@ -7,6 +7,7 @@ defmodule SuperTiger.PodcastController do
     podcasts =
       #Repo.all(Podcast)
       SuperTiger.Podcast
+      |> where(category: params[:category_id])
       |> order_by(desc: :id)
       |> SuperTiger.Repo.paginate(params)
 
